@@ -7,6 +7,8 @@ import org.springframework.boot.autoconfigure.SpringBootApplication;
 public class OpmsIctApplication {
 
 	public static void main(String[] args) {
+
+
 		SpringApplication.run(OpmsIctApplication.class, args);
 	}
 
