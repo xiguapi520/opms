@@ -45,10 +45,6 @@
       
 
 
-      <!-- Make page fluid -->
-      <div class="row">
-        
-
 
 
 
@@ -232,8 +228,13 @@
           <div class="main">
 
 
-         
-                   <!-- tile -->
+
+            <!-- Make page fluid -->
+            <div class="row">
+
+
+
+            <!-- tile -->
                 <section class="tile color transparent-black">
 
 
@@ -260,9 +261,14 @@
                       </div>
 
                       <div class="col-sm-8 col-xs-6 text-right">
-                        
-                         <div class="btn-group btn-group-xs table-options">
-                          <button type="button" class="btn btn-default">查询</button>
+
+                        <div class="btn-group btn-group-xs table-options">
+                          <button type="button"  data-toggle="modal" data-target="#myModalinsert" class="btn btn-greensea">新增</button>
+                        </div>
+
+
+                        <div class="btn-group btn-group-xs table-options">
+                          <button type="button" class="btn btn-greensea">查询</button>
                         </div>
 
                       </div>
@@ -301,7 +307,7 @@
 						  <td>20%</td>
 						  <td>XXX,XXX,XXX</td>
 						  <th>短信/微信</th>
-                          <td><a href="#" class="check-toggler checked"></a> <a href="#" class="check-toggler"></a></td>
+                          <td><a href="#" class="check-toggler checked"  data-toggle="modal" data-target="#myModalupdate" ></a> <a href="#" class="check-toggler"  data-toggle="modal" data-target="#myModalremove" ></a></td>
                         </tr>
                         <tr>
                        
@@ -312,7 +318,7 @@
 						  <td>40%</td>
 						  <td>XXX,XXX,XXX</td>
 						  <th>短信/微信</th>
-                          <td><a href="#" class="check-toggler checked"></a> <a href="#" class="check-toggler"></a></td>
+                          <td><a href="#" class="check-toggler checked"  data-toggle="modal" data-target="#myModalupdate" ></a> <a href="#" class="check-toggler"  data-toggle="modal" data-target="#myModalremove" ></a></td>
                         </tr>
 						
                       
@@ -361,16 +367,195 @@
 
 
 
+              <!-- /tile -->
+
+              <!-- 模态框（Modal） -->
+              <div class="modal fade"   id="myModalinsert" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
+                <div class="modal-dialog">
+                  <div class="modal-content">
+                    <div class="modal-header">
+                      <button class="close" data-dismiss="modal" aria-hidden="true">
+
+                      </button>
+                      <h4 class="modal-title">
+                        <strong>
+                          告警规则新增
+                        </strong>
+                      </h4>
+                    </div>
+                    <form class="form-horizontal" role="form">
+                      <div class="modal-body" style="background-color:#F5F5F5">
+
+                        <strong>
+                          IP
+                          <select class="chosen-select chosen-transparent form-control" id="input07">
+                            <option>1</option>
+                            <option>2</option>
+                          </select>
+
+                          监控内容
+                          <select class="chosen-select chosen-transparent form-control" id="input07">
+                            <option>1</option>
+                            <option>2</option>
+                          </select>
+
+                          阈值
+                          <select class="chosen-select chosen-transparent form-control" id="input07">
+                            <option>1</option>
+                            <option>2</option>
+                            <option>3</option>
+                          </select>
+                          <br/>
+                          告警人员
+                          <div class="checkbox check-transparent">
+                            xxx1<input type="checkbox" value="1" id="opt01" checked>
+                            <label for="opt01"></label>
+                            xxx2<input type="checkbox" value="1" id="opt02">
+                            <label for="opt02"></label>
+                            xxx3<input type="checkbox" value="1" id="opt03">
+                            <label for="opt03"></label>
+                          </div>
+
+                          <br/>
+
+                          告警方式
+                          <div class="checkbox check-transparent">
+                            短信<input type="checkbox" value="1" id="opt04" checked>
+                            <label for="opt04"></label>
+                          </div>
+
+
+                        </strong>
+                      </div>
+
+                      <div class="modal-footer" >
+                        <button type="button" class="btn btn-default" data-dismiss="modal">关闭
+                        </button>
+                        <button type="button" class="btn btn-primary">
+                          保存提交
+                        </button>
+                      </div>
+                    </form>
+                  </div><!-- /.modal-content -->
+                </div><!-- /.modal -->
+              </div>
+
+
+
+              <!-- 模态框（Modal） -->
+              <div class="modal fade" id="myModalupdate" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
+                <div class="modal-dialog">
+                  <div class="modal-content">
+                    <div class="modal-header">
+                      <button class="close" data-dismiss="modal" aria-hidden="true">
+
+                      </button>
+                      <h4 class="modal-title">
+                        <strong>
+                          告警规则编辑
+                        </strong>
+                      </h4>
+                    </div>
+                    <form class="form-horizontal" role="form">
+                      <div class="modal-body" style="background-color:#F5F5F5">
+
+                        <strong>
+                          IP
+                          <select class="chosen-select chosen-transparent form-control" id="input07">
+                            <option>1</option>
+                            <option>2</option>
+                          </select>
+
+                          监控内容
+                          <select class="chosen-select chosen-transparent form-control" id="input07">
+                            <option>1</option>
+                            <option>2</option>
+                          </select>
+
+                          阈值
+                          <select class="chosen-select chosen-transparent form-control" id="input07">
+                            <option>1</option>
+                            <option>2</option>
+                            <option>3</option>
+                          </select>
+                          <br/>
+                          告警人员
+                          <div class="checkbox check-transparent">
+                            xxx1<input type="checkbox" value="1" id="opt05" checked>
+                            <label for="opt05"></label>
+                            xxx2<input type="checkbox" value="1" id="opt06">
+                            <label for="opt06"></label>
+                            xxx3<input type="checkbox" value="1" id="opt07">
+                            <label for="opt07"></label>
+                          </div>
+
+                          <br/>
+
+                          告警方式
+                          <div class="checkbox check-transparent">
+                            短信<input type="checkbox" value="1" id="opt08" checked>
+                            <label for="opt08"></label>
+                          </div>
+
+
+
+                        </strong>
+                      </div>
+
+                      <div class="modal-footer">
+                        <button type="button" class="btn btn-default" data-dismiss="modal">关闭
+                        </button>
+                        <button type="button" class="btn btn-primary">
+                          提交更改
+                        </button>
+                      </div>
+                    </form>
+                  </div><!-- /.modal-content -->
+                </div><!-- /.modal -->
+              </div>
+
+
+              <!-- 模态框（Modal） -->
+              <div class="modal fade" id="myModalremove" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
+                <div class="modal-dialog">
+                  <div class="modal-content">
+                    <div class="modal-header">
+                      <button class="close" data-dismiss="modal" aria-hidden="true">
+
+                      </button>
+                      <h4 class="modal-title" >
+                        <strong>
+                          告警源管理删除
+                        </strong>
+                      </h4>
+                    </div>
+                    <form class="form-horizontal" role="form">
+                      <div class="modal-body">
+                        <strong>
+                          确认删除吗？
+                        </strong>
+                      </div>
+
+                      <div class="modal-footer">
+                        <button type="button" class="btn btn-default" data-dismiss="modal">关闭
+                        </button>
+                        <button type="button" class="btn btn-danger margin-bottom-20">确认</button>
+                      </div>
+                    </form>
+                  </div><!-- /.modal-content -->
+                </div><!-- /.modal -->
+              </div>
 
 
 
           </div>
-        
+            <!-- make page row -->
 
 
 
-        </div>
 
+          </div>
+          <!-- main -->
 
 
       </div>
@@ -378,18 +563,13 @@
 
 
 
-
     </div>
-    <!-- Wrap all page content end -->
-
-
-
-
+    <!-- Wrap all page content here -->
 	
     <!-- jQuery (necessary for Bootstrap's JavaScript plugins) -->
     <script src="assets/js/jquery.min.js"></script>
     <!-- Include all compiled plugins (below), or include individual files as needed -->
-    <script src="assets/js/bootstrap-3.3.4.js"></script>
+    <script src="assets/js/bootstrap.min.js"></script>
     <script type="text/javascript" src="assets/js/vendor/mmenu/js/jquery.mmenu.min.js"></script>
     <script type="text/javascript" src="assets/js/vendor/sparkline/jquery.sparkline.min.js"></script>
     <script type="text/javascript" src="assets/js/vendor/nicescroll/jquery.nicescroll.min.js"></script>

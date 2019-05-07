@@ -45,9 +45,6 @@
       
 
 
-      <!-- Make page fluid -->
-      <div class="row">
-        
 
 
 
@@ -232,8 +229,11 @@
           <div class="main">
 
 
-         
-                   <!-- tile -->
+            <!-- Make page fluid -->
+            <div class="row">
+
+
+            <!-- tile -->
                 <section class="tile color transparent-black">
 
 
@@ -262,9 +262,14 @@
                       </div>
 
                       <div class="col-sm-8 col-xs-6 text-right">
-                        
-                         <div class="btn-group btn-group-xs table-options">
-                          <button type="button" class="btn btn-default">查询</button>
+
+                        <div class="btn-group btn-group-xs table-options">
+                          <button type="button"  data-toggle="modal" data-target="#myModalinsert" class="btn btn-greensea">新增</button>
+                        </div>
+
+
+                        <div class="btn-group btn-group-xs table-options">
+                          <button type="button" class="btn btn-greensea">查询</button>
                         </div>
 
                       </div>
@@ -301,7 +306,7 @@
 						  <td>13XXXXXXXXXX</td>
 						  <td>195731479@qq.com</td>
 						  <td>13XXXXXXXXXX</td>
-                          <td><a href="#" class="check-toggler checked"></a> <a href="#" class="check-toggler"></a></td>
+                          <td><a href="#" class="check-toggler checked"  data-toggle="modal" data-target="#myModalupdate" ></a> <a href="#" class="check-toggler"  data-toggle="modal" data-target="#myModalremove" ></a></td>
                         </tr>
                         <tr>
                        
@@ -310,7 +315,7 @@
 						  <td>13XXXXXXXXXX</td>
 						  <td>195731479@qq.com</td>
 						  <td>13XXXXXXXXXX</td>
-                          <td><a href="#" class="check-toggler checked"></a> <a href="#" class="check-toggler"></a></td>
+                          <td><a href="#" class="check-toggler checked"  data-toggle="modal" data-target="#myModalupdate"></a> <a href="#" class="check-toggler"  data-toggle="modal" data-target="#myModalremove" ></a></td>
                         </tr>
                         <tr>
                         
@@ -319,7 +324,7 @@
 						  <td>13XXXXXXXXXX</td>
 						  <td>195731479@qq.com</td>
 						  <td>13XXXXXXXXXX</td>
-                          <td><a href="#" class="check-toggler checked"></a> <a href="#" class="check-toggler"></a></td>
+                          <td><a href="#" class="check-toggler checked" data-toggle="modal" data-target="#myModalupdate"></a> <a href="#" class="check-toggler"  data-toggle="modal" data-target="#myModalremove" ></a></td>
                         </tr>
                       </tbody>
                     </table>
@@ -358,43 +363,146 @@
                   </div>
                   <!-- /tile footer -->
                   
-                
-
 
                 </section>
                 <!-- /tile -->
 
+              <!-- 模态框（Modal） -->
+              <div class="modal fade" id="myModalinsert" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
+                <div class="modal-dialog">
+                  <div class="modal-content">
+                    <div class="modal-header">
+                      <button class="close" data-dismiss="modal" aria-hidden="true">
+
+                      </button>
+                      <h4 class="modal-title">
+                        <strong>
+                          告警人员管理新增
+                        </strong>
+                      </h4>
+                    </div>
+                    <form class="form-horizontal" role="form">
+                      <div class="modal-body">
+
+                        <strong>
+                          姓名<input type="text" class="form-control"> <br/>
+                          手机号<input type="text" class="form-control"><br/>
+                          邮箱<input type="text" class="form-control"><br/>
+                          微信号<input type="text" class="form-control">
+                        </strong>
+                      </div>
+
+                      <div class="modal-footer">
+                        <button type="button" class="btn btn-default" data-dismiss="modal">关闭
+                        </button>
+                        <button type="button" class="btn btn-primary">
+                          保存提交
+                        </button>
+                      </div>
+                    </form>
+                  </div><!-- /.modal-content -->
+                </div><!-- /.modal -->
+              </div>
 
 
 
+              <!-- 模态框（Modal） -->
+              <div class="modal fade" id="myModalupdate" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
+                <div class="modal-dialog">
+                  <div class="modal-content">
+                    <div class="modal-header">
+                      <button class="close" data-dismiss="modal" aria-hidden="true">
+
+                      </button>
+                      <h4 class="modal-title">
+                        <strong>
+                        告警人员管理编辑
+                        </strong>
+                      </h4>
+                    </div>
+                    <form class="form-horizontal" role="form">
+                    <div class="modal-body">
+
+                        <strong>
+                        姓名<input type="text" class="form-control"> <br/>
+                        手机号<input type="text" class="form-control"><br/>
+                        邮箱<input type="text" class="form-control"><br/>
+                        微信号<input type="text" class="form-control">
+                        </strong>
+                    </div>
+
+                    <div class="modal-footer">
+                      <button type="button" class="btn btn-default" data-dismiss="modal">关闭
+                      </button>
+                      <button type="button" class="btn btn-primary">
+                        提交更改
+                      </button>
+                    </div>
+                    </form>
+                  </div><!-- /.modal-content -->
+                </div><!-- /.modal -->
+              </div>
 
 
-          </div>
-        
+              <!-- 模态框（Modal） -->
+              <div class="modal fade" id="myModalremove" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
+                <div class="modal-dialog">
+                  <div class="modal-content">
+                    <div class="modal-header">
+                      <button class="close" data-dismiss="modal" aria-hidden="true">
+
+                      </button>
+                      <h4 class="modal-title" >
+                        <strong>
+                        告警人员管理删除
+                        </strong>
+                      </h4>
+                    </div>
+                    <form class="form-horizontal" role="form">
+                      <div class="modal-body">
+                        <strong>
+                           确认删除吗？
+                        </strong>
+                      </div>
+
+                      <div class="modal-footer">
+                        <button type="button" class="btn btn-default" data-dismiss="modal">关闭
+                        </button>
+                        <button type="button" class="btn btn-danger margin-bottom-20">确认</button>
+                      </div>
+                    </form>
+                  </div><!-- /.modal-content -->
+                </div><!-- /.modal -->
+              </div>
+
+
+            </div>
+            <!-- make page row -->
 
 
 
         </div>
+        <!-- main -->
+
+
+
 
 
 
       </div>
-      <!-- Make page fluid-->
+      <!-- Page content -->
 
 
 
-
-    </div>
-    <!-- Wrap all page content end -->
-
-
+  </div>
+    <!-- Wrap all page content here -->
 
 
 	
     <!-- jQuery (necessary for Bootstrap's JavaScript plugins) -->
     <script src="assets/js/jquery.min.js"></script>
     <!-- Include all compiled plugins (below), or include individual files as needed -->
-    <script src="assets/js/bootstrap-3.3.4.js"></script>
+    <script src="assets/js/bootstrap.min.js"></script>
     <script type="text/javascript" src="assets/js/vendor/mmenu/js/jquery.mmenu.min.js"></script>
     <script type="text/javascript" src="assets/js/vendor/sparkline/jquery.sparkline.min.js"></script>
     <script type="text/javascript" src="assets/js/vendor/nicescroll/jquery.nicescroll.min.js"></script>
@@ -419,10 +527,7 @@
     <script src="assets/js/vendor/chosen/chosen.jquery.min.js"></script>
     <script src="assets/js/minimal.min.js"></script>
 
-    <script>
-   
-      
-    </script>
+
   </body>
 </html>
       

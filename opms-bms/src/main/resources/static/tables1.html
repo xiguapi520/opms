@@ -45,9 +45,7 @@
       
 
 
-      <!-- Make page fluid -->
-      <div class="row">
-        
+
 
 
 
@@ -231,9 +229,11 @@
           <!-- content main container -->
           <div class="main">
 
+            <!-- Make page fluid -->
+            <div class="row">
 
-         
-                   <!-- tile -->
+
+            <!-- tile -->
                 <section class="tile color transparent-black">
 
 
@@ -260,9 +260,14 @@
                       </div>
 
                       <div class="col-sm-8 col-xs-6 text-right">
-                        
-                         <div class="btn-group btn-group-xs table-options">
-                          <button type="button" class="btn btn-default">查询</button>
+
+                        <div class="btn-group btn-group-xs table-options">
+                          <button type="button"  data-toggle="modal" data-target="#myModalinsert" class="btn btn-greensea">新增</button>
+                        </div>
+
+
+                        <div class="btn-group btn-group-xs table-options">
+                          <button type="button" class="btn btn-greensea">查询</button>
                         </div>
 
                       </div>
@@ -301,7 +306,7 @@
 						  <td>百分比/%</td>
 						  <td>接口</td>
 						  <th>cpu.combined</th>
-                          <td><a href="#" class="check-toggler checked"></a> <a href="#" class="check-toggler"></a></td>
+                          <td><a href="#" class="check-toggler checked"  data-toggle="modal" data-target="#myModalupdate" ></a> <a href="#" class="check-toggler"  data-toggle="modal" data-target="#myModalremove" ></a></td>
                         </tr>
                         <tr>
                        
@@ -311,7 +316,7 @@
 						  <td>byte</td>
 						  <td>接口</td>
 						  <th>memory.free</th>
-                          <td><a href="#" class="check-toggler checked"></a> <a href="#" class="check-toggler"></a></td>
+                          <td><a href="#" class="check-toggler checked"  data-toggle="modal" data-target="#myModalupdate" ></a> <a href="#" class="check-toggler"  data-toggle="modal" data-target="#myModalremove" ></a></td>
                         </tr>
                         <tr>
                         
@@ -321,7 +326,7 @@
 						  <td>byte</td>
 						  <td>接口</td>
 						  <th>disk.avail</th>
-                          <td><a href="#" class="check-toggler checked"></a> <a href="#" class="check-toggler"></a></td>
+                          <td><a href="#" class="check-toggler checked"  data-toggle="modal" data-target="#myModalupdate" ></a> <a href="#" class="check-toggler"  data-toggle="modal" data-target="#myModalremove" ></a></td>
                         </tr>
 						
 						
@@ -370,16 +375,151 @@
 
 
 
+              <!-- /tile -->
+
+              <!-- 模态框（Modal） -->
+              <div class="modal fade" id="myModalinsert" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
+                <div class="modal-dialog">
+                  <div class="modal-content">
+                    <div class="modal-header">
+                      <button class="close" data-dismiss="modal" aria-hidden="true">
+
+                      </button>
+                      <h4 class="modal-title">
+                        <strong>
+                          告警源管理新增
+                        </strong>
+                      </h4>
+                    </div>
+                    <form class="form-horizontal" role="form">
+                      <div class="modal-body">
+
+                        <strong>
+                          IP<input type="text" class="form-control">
+                          监控内容<input type="text" class="form-control">
+                          采集类型
+                          <select class="chosen-select chosen-transparent form-control" id="input07">
+                            <option>1</option>
+                            <option>2</option>
+                            <option>3</option>
+                          </select>
+
+                          单位类型
+                          <select class="chosen-select chosen-transparent form-control" id="input07">
+                            <option>1</option>
+                            <option>2</option>
+                            <option>3</option>
+                          </select>
+
+                          采集地址<input type="text" class="form-control">
+                        </strong>
+                      </div>
+
+                      <div class="modal-footer">
+                        <button type="button" class="btn btn-default" data-dismiss="modal">关闭
+                        </button>
+                        <button type="button" class="btn btn-primary">
+                          保存提交
+                        </button>
+                      </div>
+                    </form>
+                  </div><!-- /.modal-content -->
+                </div><!-- /.modal -->
+              </div>
+
+
+
+              <!-- 模态框（Modal） -->
+              <div class="modal fade" id="myModalupdate" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
+                <div class="modal-dialog">
+                  <div class="modal-content">
+                    <div class="modal-header">
+                      <button class="close" data-dismiss="modal" aria-hidden="true">
+
+                      </button>
+                      <h4 class="modal-title">
+                        <strong>
+                          告警源管理编辑
+                        </strong>
+                      </h4>
+                    </div>
+                    <form class="form-horizontal" role="form">
+                      <div class="modal-body">
+
+                        <strong>
+                          IP<input type="text" class="form-control">
+                          监控内容<input type="text" class="form-control">
+                          采集类型
+                          <select class="chosen-select chosen-transparent form-control" id="input07">
+                            <option>1</option>
+                            <option>2</option>
+                            <option>3</option>
+                          </select>
+
+                          单位类型
+                          <select class="chosen-select chosen-transparent form-control" id="input07">
+                            <option>1</option>
+                            <option>2</option>
+                            <option>3</option>
+                          </select>
+
+                          采集地址<input type="text" class="form-control">
+                        </strong>
+                      </div>
+
+                      <div class="modal-footer">
+                        <button type="button" class="btn btn-default" data-dismiss="modal">关闭
+                        </button>
+                        <button type="button" class="btn btn-primary">
+                          提交更改
+                        </button>
+                      </div>
+                    </form>
+                  </div><!-- /.modal-content -->
+                </div><!-- /.modal -->
+              </div>
+
+
+              <!-- 模态框（Modal） -->
+              <div class="modal fade" id="myModalremove" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
+                <div class="modal-dialog">
+                  <div class="modal-content">
+                    <div class="modal-header">
+                      <button class="close" data-dismiss="modal" aria-hidden="true">
+
+                      </button>
+                      <h4 class="modal-title" >
+                        <strong>
+                          告警源管理删除
+                        </strong>
+                      </h4>
+                    </div>
+                    <form class="form-horizontal" role="form">
+                      <div class="modal-body">
+                        <strong>
+                          确认删除吗？
+                        </strong>
+                      </div>
+
+                      <div class="modal-footer">
+                        <button type="button" class="btn btn-default" data-dismiss="modal">关闭
+                        </button>
+                        <button type="button" class="btn btn-danger margin-bottom-20">确认</button>
+                      </div>
+                    </form>
+                  </div><!-- /.modal-content -->
+                </div><!-- /.modal -->
+              </div>
 
 
 
           </div>
-        
+            <!-- make page row -->
 
 
 
         </div>
-
+          <!-- main -->
 
 
       </div>
@@ -388,17 +528,14 @@
 
 
 
+
     </div>
-    <!-- Wrap all page content end -->
-
-
-
-
+    <!-- Wrap all page content here -->
 	
     <!-- jQuery (necessary for Bootstrap's JavaScript plugins) -->
     <script src="assets/js/jquery.min.js"></script>
     <!-- Include all compiled plugins (below), or include individual files as needed -->
-    <script src="assets/js/bootstrap-3.3.4.js"></script>
+    <script src="assets/js/bootstrap.min.js"></script>
     <script type="text/javascript" src="assets/js/vendor/mmenu/js/jquery.mmenu.min.js"></script>
     <script type="text/javascript" src="assets/js/vendor/sparkline/jquery.sparkline.min.js"></script>
     <script type="text/javascript" src="assets/js/vendor/nicescroll/jquery.nicescroll.min.js"></script>
